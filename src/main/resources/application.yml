@@ -1,0 +1,16 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: com.demo1 #指定服务名
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/web?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    database: MySQL
+    show-sql: true
+jwt:
+  config:
+    key: lishi

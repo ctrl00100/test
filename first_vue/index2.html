@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>first_vue</title>
+  </head>
+  <body>
+    <div id="app">
+    <!-- built files will be auto injected -->
+
+<!--    <input type="text" v-model="msg">-->
+      <input type="text" v-bind:value="msg" v-on:input="valueChange">
+    <h3>{{msg}}</h3>
+    </div>
+
+  </body>
+
+  <script src="../vue.js"></script>
+  <script type="text/javascript">
+
+    new Vue({
+      el: "#app",
+      data(){
+          return{
+              msg:"大雨"
+          }
+      },
+      methods:{
+          valueChange(e){
+              console.log(e.target.value);
+              this.msg=e.target.value;
+          }
+      }
+
+
+});
+
+
+  </script>
+</html>
